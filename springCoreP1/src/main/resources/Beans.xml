@@ -6,6 +6,13 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <!-- bean definition for PetrolEngine  -->
-    <bean id="PetrolEngine" class="org.example.PetrolEngine" />
+    <bean id="petrolEngine" class="org.example.PetrolEngine" />
+
+    <!-- Bean definition for Car
+     The 'engine' property of the Car bean is injected
+     with a reference to the 'petrolEngine' bean -->
+    <bean id="car" class="org.example.Car">
+        <property name="engine" ref="petrolEngine" />   <!-- setEngine(PetrolEngine engine) method needin Car  -->
+    </bean>
 
 </beans>
