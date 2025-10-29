@@ -4,6 +4,10 @@ public class Car {
 
     Engine engine;
 
+    public Car(){
+        System.out.println("Car constructor");
+    }
+
     public void drive() {
         int start = engine.start();
         if(start>=1){
@@ -11,7 +15,6 @@ public class Car {
         }else{
             System.out.println("The car is not running");
         }
-
     }
 
     public void setEngine(PetrolEngine engine) {
