@@ -5,11 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="engine" class="org.example.PetrolEngine" />
+    <bean id="petrolEngine" class="org.example.PetrolEngine" />
 
-    <bean id="disealEngine" class="org.example.DisealEngine" />
+<!--    <bean id="disealEngine" class="org.example.DisealEngine"  />    -->
+
+    <bean id="car" class="org.example.Car" autowire="constructor" />
 
     <!-- Bean definition for Car -->
     <!--    <bean id="car" class="org.example.Car" autowire="byName" />  -->
+
+<!--    <bean id="car" class="org.example.Car" autowire="byType" />-->
 
 </beans>

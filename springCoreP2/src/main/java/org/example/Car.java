@@ -4,6 +4,8 @@ public class Car {
 
     Engine engine;
 
+    public Car(Engine engine) {this.engine = engine;}
+
     public void drive() {
         int start = engine.start();
         if(start>=1){
